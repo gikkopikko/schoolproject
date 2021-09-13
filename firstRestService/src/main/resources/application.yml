@@ -1,0 +1,13 @@
+server:
+  port: 8087
+spring:
+  datasource:
+    password: Betelguese@143
+    url: jdbc:mysql://localhost:3306/school
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
