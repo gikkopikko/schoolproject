@@ -3,8 +3,10 @@ pipeline{
     stages{
         stage("compilePhase"){
             steps{
-                bat "cd firstRestService"
-                bat "mvn compile"
+                bat '''
+                	cd firstRestService
+                	mvn compile
+        		'''
                 }
             }
 
