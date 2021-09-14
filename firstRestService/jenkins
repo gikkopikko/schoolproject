@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+        stage("compilePhase"){
+            steps{
+                bat "cd C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\compilePhase\firstRestService"
+                bat "mvn compile"
+                }
+            }
+
+        stage("testPhase"){
+            steps{
+                bat "cd C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\compilePhase\firstRestService"
+                bat "mvn test"
+                }
+        }
+
+        stage("packagePhase"){
+        steps{
+            bat "cd C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\compilePhase\firstRestService"
+            bat "mvn clean package"
+                }
+            }
+        }
+}
