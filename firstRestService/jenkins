@@ -12,15 +12,19 @@ pipeline{
 
         stage("testPhase"){
             steps{
-                bat "cd firstRestService"
-                bat "mvn test"
+                bat """
+                	cd firstRestService
+                	mvn test
+        		"""
                 }
         }
 
         stage("packagePhase"){
         steps{
-            bat "cd firstRestService"
-            bat "mvn clean package"
+           bat """
+                	cd firstRestService
+                	mvn clean package
+        		"""
                 }
             }
         }
